@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+a:hover {
+  letter-spacing: 0.8px;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
