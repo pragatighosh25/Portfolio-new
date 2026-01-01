@@ -50,16 +50,16 @@ export default function Hero() {
           <span className="absolute inset-0 bg-white scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100" />
         </a>
         <a
-          href="/Pragati_CV.pdf"
+          href="/pragati_resume.pdf"
           className="relative inline-flex items-center px-6 py-3 border border-white font-semibold overflow-hidden group"
         >
           <span className="relative z-10 transition-colors duration-300 group-hover:text-black">
             Download CV
           </span>
 
-          {/* center-out fill */}
-          <span className="absolute inset-0 bg-white scale-y-0 origin-center transition-transform duration-300 ease-out group-hover:scale-y-100" />
+          <span className="absolute inset-0 bg-white scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100" />
         </a>
+        
       </motion.div>
 
       {/* Scroll Indicator */}

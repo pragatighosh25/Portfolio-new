@@ -1,29 +1,43 @@
-// components/CustomCursor.jsx
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 
-export default function CustomCursor() {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [hovering, setHovering] = useState(false);
+export default function Cursor() {
+  const cursorRef = useRef(null);
 
   useEffect(() => {
-    const move = (e) => setPosition({ x: e.clientX, y: e.clientY });
+    const cursor = cursorRef.current;
+
+    let mouseX = 0;
+    let mouseY = 0;
+    let currentX = 0;
+    let currentY = 0;
+
+    const speed = 0.15;
+
+    const move = (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    };
+
+    const animate = () => {
+      currentX += (mouseX - currentX) * speed;
+      currentY += (mouseY - currentY) * speed;
+
+      cursor.style.transform = `translate3d(${currentX}px, ${currentY}px, 0)`;
+      requestAnimationFrame(animate);
+    };
+
     window.addEventListener("mousemove", move);
+    animate();
+
     return () => window.removeEventListener("mousemove", move);
   }, []);
 
   return (
     <div
-      className={`fixed pointer-events-none z-50 transition-all duration-150 ${
-        hovering ? "bg-white mix-blend-difference scale-125" : "bg-white/60"
-      }`}
-      style={{
-        left: position.x + "px",
-        top: position.y + "px",
-        width: "12px",
-        height: "12px",
-        borderRadius: "50%",
-        transform: "translate(-50%, -50%)",
-      }}
+      ref={cursorRef}
+      className="fixed top-0 left-0 w-5 h-5 rounded-full pointer-events-none z-[9999]
+                 bg-white mix-blend-difference"
+      style={{ transform: "translate(-50%, -50%)" }}
     />
   );
 }
