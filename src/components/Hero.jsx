@@ -1,75 +1,75 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function Hero() {
-  const fadeIn = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  };
+  const { scrollYProgress } = useScroll();
+
+  // subtle parallax effect for the main headline
+  const yRange = useTransform(scrollYProgress, [0, 0.1], [0, -20]);
 
   return (
-    <section className="min-h-screen flex flex-col justify-center items-start px-8 lg:px-20 bg-black text-white">
-      {/* Intro Text */}
-      <motion.h1
-        variants={fadeIn}
-        initial="hidden"
-        animate="visible"
-        transition={{ duration: 0.7, delay: 0.2 }}
-        className="text-5xl lg:text-7xl font-extrabold leading-tight"
+    <section className="min-h-screen bg-black text-white px-8 lg:px-20 flex flex-col justify-center relative overflow-hidden">
+      
+      {/* Headline group — subtle parallax and fade */}
+      <motion.div
+        style={{ y: yRange }}
+        initial={{ opacity: 0.2 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+        className="max-w-4xl"
       >
-        I build minimalist
-        <br /> experiences that feel alive.
-      </motion.h1>
+        <h1 className="text-5xl lg:text-7xl font-extrabold leading-tight">
+          I build minimalist
+          <br />
+          experiences that feel alive.
+        </h1>
+      </motion.div>
 
       {/* Subtext */}
       <motion.p
-        variants={fadeIn}
-        initial="hidden"
-        animate="visible"
-        transition={{ duration: 0.7, delay: 0.45 }}
-        className="mt-4 text-xl lg:text-2xl font-light max-w-xl"
+        initial={{ opacity: 0, y: 12 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+        className="mt-6 text-xl lg:text-2xl font-light max-w-xl text-white/70"
       >
         Frontend Developer • React, Tailwind, Framer Motion • UI/UX-Driven
       </motion.p>
 
-      {/* Ctas */}
+      {/* CTA Buttons — scale on hover, fade in */}
       <motion.div
-        variants={fadeIn}
-        initial="hidden"
-        animate="visible"
-        transition={{ duration: 0.7, delay: 0.7 }}
-        className="mt-8 flex gap-6"
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+        className="mt-10 flex gap-6"
       >
         <a
           href="#work"
-          className="relative inline-flex items-center px-6 py-3 border border-white font-semibold overflow-hidden group"
+          className="px-6 py-3 border border-white text-sm font-semibold uppercase tracking-wide transition-all duration-300 ease-out hover:scale-105 hover:bg-white hover:text-black"
         >
-          <span className="relative z-10 transition-colors duration-300 group-hover:text-black">
-            View Work
-          </span>
-
-          <span className="absolute inset-0 bg-white scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100" />
+          View Work
         </a>
+
         <a
           href="/pragati_resume.pdf"
-          className="relative inline-flex items-center px-6 py-3 border border-white font-semibold overflow-hidden group"
+          target="_blank"
+          className="px-6 py-3 border border-white text-sm font-semibold uppercase tracking-wide transition-all duration-300 ease-out hover:scale-105 hover:bg-white hover:text-black"
         >
-          <span className="relative z-10 transition-colors duration-300 group-hover:text-black">
-            Download CV
-          </span>
-
-          <span className="absolute inset-0 bg-white scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100" />
+          Download CV
         </a>
-        
       </motion.div>
 
       {/* Scroll Indicator */}
       <motion.div
-        animate={{ y: [0, 8, 0] }}
-        transition={{ repeat: Infinity, duration: 1.6 }}
+        animate={{ y: [0, 10, 0] }}
+        transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2"
       >
-        <div className="w-[2px] h-10 bg-white"></div>
+        <div className="w-px h-12 bg-white/50" />
       </motion.div>
     </section>
   );
 }
+
+

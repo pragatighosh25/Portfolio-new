@@ -35,7 +35,7 @@ export default function Cursor() {
   return (
     <div
       ref={cursorRef}
-      className="fixed top-0 left-0 w-5 h-5 rounded-full pointer-events-none z-[9999]
+      className="fixed top-0 left-0 w-5 h-5 rounded-full pointer-events-none z-9999
                  bg-white mix-blend-difference"
       style={{ transform: "translate(-50%, -50%)" }}
     />
