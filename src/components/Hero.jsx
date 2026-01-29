@@ -45,26 +45,26 @@ export default function Hero() {
         className="mt-10 flex gap-6"
       >
         <a
-  href="#work"
-  onClick={(e) => {
-    e.preventDefault();
-    const lenis = getLenis();
-    if (lenis) {
-      lenis.scrollTo("#work");
-    } else {
-      document
-        .getElementById("work")
-        ?.scrollIntoView({ behavior: "smooth" });
-    }
-  }}
-  className="px-6 py-3 border border-white text-sm font-semibold uppercase tracking-wide
+          href="#work"
+          onClick={(e) => {
+            e.preventDefault();
+            const lenis = getLenis();
+            if (lenis) {
+              lenis.scrollTo("#work");
+            } else {
+              document
+                .getElementById("work")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }
+          }}
+          className="px-6 py-3 border border-white text-sm font-semibold uppercase tracking-wide
              transition-all duration-300 ease-out hover:scale-105 hover:bg-white hover:text-black"
->
-  View Work
-</a>
+        >
+          View Work
+        </a>
 
         <a
-          href="/pragati_resume.pdf"
+          href="/Pragati_Ghosh_Full_Stack.pdf"
           target="_blank"
           className="px-6 py-3 border border-white text-sm font-semibold uppercase tracking-wide transition-all duration-300 ease-out hover:scale-105 hover:bg-white hover:text-black"
         >
