@@ -8,7 +8,7 @@ export default function Hero() {
   const yRange = useTransform(scrollYProgress, [0, 0.1], [0, -20]);
 
   return (
-    <section className="min-h-screen bg-black text-white px-8 lg:px-20 flex flex-col justify-center relative overflow-hidden">
+    <section id="top" className="min-h-screen bg-black text-white px-8 lg:px-20 flex flex-col justify-center relative overflow-hidden">
       {/* Headline group — subtle parallax and fade */}
       <motion.div
         style={{ y: yRange }}
@@ -18,6 +18,16 @@ export default function Hero() {
         transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
         className="max-w-4xl"
       >
+        <motion.span
+  initial={{ opacity: 0, y: 10 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+  className="block mb-4 text-sm uppercase tracking-[0.3em] text-white/50"
+>
+  Pragati Ghosh
+</motion.span>
+
         <h1 className="text-5xl lg:text-7xl font-extrabold leading-tight">
           I build minimalist
           <br />

@@ -11,7 +11,7 @@ export default function About() {
         className="max-w-4xl"
       >
         {/* Eyebrow */}
-        <p className="text-xs uppercase tracking-[0.3em] text-emerald-400/70 mb-6">
+        <p className="text-xs uppercase tracking-[0.3em] text-white/50 mb-6">
           About
         </p>
 

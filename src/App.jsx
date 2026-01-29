@@ -7,6 +7,7 @@ import Experience from './components/Experience.jsx'
 import Contact from './components/Contact.jsx'
 import { useEffect } from 'react'
 import { initLenis } from './helpers/lenis.js'
+import Header from './components/Header.jsx'
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
   return (
     <>
     <Cursor />
+    <Header />
     <Hero />
     <About />
     <Work />
