@@ -17,7 +17,7 @@ export default function About() {
 
         {/* Headline */}
         <h2 className="text-4xl md:text-6xl leading-[1.1] font-medium">
-          I focus on building interfaces that feel
+          I focus on building full-stack products that feel
           <span className="block text-white/40">
             intentional, human, and quietly powerful.
           </span>
@@ -25,8 +25,8 @@ export default function About() {
 
         {/* Body copy */}
         <p className="mt-8 text-lg text-white/60 max-w-2xl">
-          I’m a frontend developer crafting calm, deliberate interfaces
-          where usability, motion, and restraint work together.
+          I’m a full stack developer crafting thoughtful interfaces and scalable
+          backends — where usability, motion, and performance work together.
         </p>
       </motion.div>
     </section>

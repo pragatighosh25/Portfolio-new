@@ -27,8 +27,8 @@ export default function Contact() {
 
         {/* Subtext */}
         <p className="mt-6 text-lg text-white/60 max-w-2xl">
-          I’m always open to meaningful conversations, collaborations,
-          or opportunities where thoughtful design and clean engineering matter.
+          I’m always open to meaningful conversations, collaborations, or
+          opportunities where thoughtful design and clean engineering matter.
         </p>
 
         {/* Primary CTA */}
@@ -45,31 +45,26 @@ export default function Contact() {
         {/* Secondary links */}
         <div className="mt-16 flex flex-col sm:flex-row gap-8 text-sm uppercase tracking-widest text-white/60">
           <a
-  href="https://github.com/pragatighosh25"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="group inline-flex items-center gap-4 text-sm uppercase tracking-widest
-             text-white/60 hover:text-white transition cursor-hover"
->
-  GitHub
-  <span className="relative block w-6 h-px bg-white/50 transition-all duration-300 group-hover:w-10 group-hover:bg-white" />
-</a>
-
+            href="https://github.com/pragatighosh25"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group text-sm uppercase tracking-widest text-white/60 hover:text-white transition cursor-hover"
+          >
+            GitHub
+            <span className="block h-px w-0 bg-white transition-all duration-300 group-hover:w-full mt-2" />
+          </a>
 
           <a
             href="https://www.linkedin.com/in/pragati-ghosh/"
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 hover:text-white transition"
+            className="group text-sm uppercase tracking-widest text-white/60 hover:text-white transition cursor-hover"
           >
             LinkedIn
-            <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
-              →
-            </span>
+            <span className="block h-px w-0 bg-white transition-all duration-300 group-hover:w-full mt-2" />
           </a>
         </div>
       </motion.div>
     </section>
   );
 }
-

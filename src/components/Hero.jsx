@@ -43,7 +43,8 @@ export default function Hero() {
         transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
         className="mt-6 text-xl lg:text-2xl font-light max-w-xl text-white/70"
       >
-        Frontend Developer • React, Tailwind, Framer Motion • UI/UX-Driven
+        Full Stack Developer • UI/UX-Driven
+
       </motion.p>
 
       {/* CTA Buttons — scale on hover, fade in */}

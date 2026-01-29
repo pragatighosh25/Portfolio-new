@@ -4,11 +4,11 @@ const experience = [
   {
     company: "Zuddl",
     role: "Frontend Developer Intern",
-    time: "2024",
+    time: "2025",
   },
   {
     company: "House of Geeks",
-    role: "UI/UX & Design Coordinator",
+    role: "UI/UX & Design Lead",
     time: "2023 — Present",
   },
 ];
