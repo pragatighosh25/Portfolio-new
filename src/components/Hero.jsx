@@ -1,4 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
+import { getLenis } from "../helpers/lenis.js";
 
 export default function Hero() {
   const { scrollYProgress } = useScroll();
@@ -8,7 +9,6 @@ export default function Hero() {
 
   return (
     <section className="min-h-screen bg-black text-white px-8 lg:px-20 flex flex-col justify-center relative overflow-hidden">
-      
       {/* Headline group — subtle parallax and fade */}
       <motion.div
         style={{ y: yRange }}
@@ -45,11 +45,23 @@ export default function Hero() {
         className="mt-10 flex gap-6"
       >
         <a
-          href="#work"
-          className="px-6 py-3 border border-white text-sm font-semibold uppercase tracking-wide transition-all duration-300 ease-out hover:scale-105 hover:bg-white hover:text-black"
-        >
-          View Work
-        </a>
+  href="#work"
+  onClick={(e) => {
+    e.preventDefault();
+    const lenis = getLenis();
+    if (lenis) {
+      lenis.scrollTo("#work");
+    } else {
+      document
+        .getElementById("work")
+        ?.scrollIntoView({ behavior: "smooth" });
+    }
+  }}
+  className="px-6 py-3 border border-white text-sm font-semibold uppercase tracking-wide
+             transition-all duration-300 ease-out hover:scale-105 hover:bg-white hover:text-black"
+>
+  View Work
+</a>
 
         <a
           href="/pragati_resume.pdf"
@@ -71,5 +83,3 @@ export default function Hero() {
     </section>
   );
 }
-
-

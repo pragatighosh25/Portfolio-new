@@ -11,7 +11,7 @@ export default function Work() {
   };
 
   return (
-    <section className="bg-black text-white px-6 md:px-20 py-28 relative">
+    <section id="work" className="bg-black text-white px-6 md:px-20 py-28 relative">
       <div className="space-y-12">
         {projects.map((project) => {
           const isActive = activeProject?.id === project.id;

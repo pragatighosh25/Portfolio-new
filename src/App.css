@@ -10,3 +10,10 @@ button:hover {
 *{
   cursor: none;
 }
+html, body {
+  height: 100%;
+}
+
+body {
+  overscroll-behavior: none;
+}
