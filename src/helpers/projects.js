@@ -8,7 +8,53 @@ import imagify from "../assets/imagify.png";
 
 export const projects = [
   {
-    id: 1,
+  id: 1,
+  title: "EventFlow",
+  subtitle: "AI-Powered Event Management Platform",
+  description:
+    "A full-stack event management and discovery platform with AI-powered event assistance, role-based access, smart recommendations, and seamless attendee-organizer workflows.",
+  preview: eventflow,
+  links: {
+    demo: "https://eventflow-frontend-alpha.vercel.app/",
+    github: "https://github.com/pragatighosh25/Eventflow",
+  },
+  stack: [
+    "React.js",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "TailwindCSS",
+    "Groq API",
+    "LLM Integration",
+  ],
+  year: "2026",
+  category: "AI SaaS Platform",
+},
+
+{
+  id: 2,
+  title: "IntervueX",
+  subtitle: "AI Resume Analyzer & Interview Platform",
+  description:
+    "An AI-driven interview preparation platform featuring resume parsing, domain-specific question generation, customizable difficulty levels, and personalized interviews based on uploaded resumes.",
+  preview: intervuex,
+  links: {
+    demo: "https://ai-interview-app-sandy.vercel.app/",
+    github: "https://github.com/pragatighosh25/AI-interview-app",
+  },
+  stack: [
+    "Next.js",
+    "Prisma",
+    "PostgreSQL",
+    "Groq API",
+    "TailwindCSS",
+    "AI Interview System",
+  ],
+  year: "2026",
+  category: "AI Web App",
+},
+  {
+    id: 3,
     title: "Imagify",
     subtitle: "AI Image Generation Platform",
     description:
@@ -24,7 +70,7 @@ export const projects = [
   },
 
   {
-    id: 2,
+    id: 4,
     title: "QuickChat",
     subtitle: "Real-time Messaging Application",
     description:
@@ -40,7 +86,7 @@ export const projects = [
   },
 
   {
-    id: 3,
+    id: 5,
     title: "The Films",
     subtitle: "Movie Discovery Platform",
     description:
@@ -56,7 +102,7 @@ export const projects = [
   },
 
   {
-    id: 4,
+    id: 6,
     title: "Tomato",
     subtitle: "Food Ordering Web App",
     description:
@@ -72,7 +118,7 @@ export const projects = [
   },
 
   {
-    id: 5,
+    id: 7,
     title: "Medicure",
     subtitle: "Mental Wellness Web Experience",
     description:
@@ -88,7 +134,7 @@ export const projects = [
   },
 
   {
-    id: 6,
+    id: 8,
     title: "Cryptoplace",
     subtitle: "Crypto Market Tracker",
     description:
