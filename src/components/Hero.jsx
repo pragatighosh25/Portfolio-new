@@ -75,7 +75,7 @@ export default function Hero() {
         </a>
 
         <a
-          href="/Pragati_Ghosh_Full_Stack.pdf"
+          href="/Pragati_Resume.pdf"
           target="_blank"
           className="px-6 py-3 border border-white text-sm font-semibold uppercase tracking-wide transition-all duration-300 ease-out hover:scale-105 hover:bg-white hover:text-black"
         >
