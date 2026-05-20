@@ -5,6 +5,8 @@ import cryptoplace from "../assets/cryptoplace.png";
 import quickchat from "../assets/Chat.png";
 import thefilms from "../assets/flims.png";
 import imagify from "../assets/imagify.png";
+import eventflow from "../assets/eventflow.png";
+import intervuex from "../assets/intervuex.png";
 
 export const projects = [
   {
