@@ -2,14 +2,14 @@ import { motion } from "framer-motion";
 
 const experience = [
   {
-    company: "Zuddl",
-    role: "Frontend Developer Intern",
-    time: "2025",
+    company: "RareLabs",
+    role: "Software Developer Intern",
+    time: "Jan 2026 — Mar 2026",
   },
   {
-    company: "House of Geeks",
-    role: "UI/UX & Design Lead",
-    time: "2023 — Present",
+    company: "Zuddl",
+    role: "Frontend Developer Intern",
+    time: "Jun 2025 — Dec 2025",
   },
 ];
 
@@ -34,6 +34,7 @@ export default function Experience() {
               <h4 className="text-2xl font-medium">{item.company}</h4>
               <p className="text-white/60">{item.role}</p>
             </div>
+
             <span className="text-white/40">{item.time}</span>
           </motion.div>
         ))}
