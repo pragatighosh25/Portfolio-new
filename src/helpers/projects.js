@@ -7,6 +7,8 @@ import thefilms from "../assets/flims.png";
 import imagify from "../assets/imagify.png";
 import eventflow from "../assets/eventflow.png";
 import intervuex from "../assets/intervuex.png";
+import vedaai from "../assets/vedaai.png";  
+
 
 export const projects = [
   {
