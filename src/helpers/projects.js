@@ -11,6 +11,33 @@ import intervuex from "../assets/intervuex.png";
 export const projects = [
   {
   id: 1,
+  title: "Veda AI",
+  subtitle: "AI-Powered Assessment Generation Platform",
+  description:
+    "A full-stack AI-driven platform that helps educators generate structured, exam-ready question papers with customizable difficulty levels, marks distribution, question types, PDF exports, and automated assessment workflows.",
+  preview: vedaai,
+  links: {
+    demo: "https://veda-ai-coral-one.vercel.app/",
+    github: "https://github.com/pragatighosh25/VedaAI",
+  },
+  stack: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Redis",
+    "BullMQ",
+    "Groq API",
+    "Zod",
+    "TailwindCSS",
+  ],
+  year: "2026",
+  category: "AI EdTech SaaS Platform",
+},
+  {
+  id: 2,
   title: "EventFlow",
   subtitle: "AI-Powered Event Management Platform",
   description:
@@ -34,7 +61,7 @@ export const projects = [
 },
 
 {
-  id: 2,
+  id: 3,
   title: "IntervueX",
   subtitle: "AI Resume Analyzer & Interview Platform",
   description:
@@ -56,7 +83,7 @@ export const projects = [
   category: "AI Web App",
 },
   {
-    id: 3,
+    id: 4,
     title: "Imagify",
     subtitle: "AI Image Generation Platform",
     description:
@@ -72,7 +99,7 @@ export const projects = [
   },
 
   {
-    id: 4,
+    id: 5,
     title: "QuickChat",
     subtitle: "Real-time Messaging Application",
     description:
@@ -88,7 +115,7 @@ export const projects = [
   },
 
   {
-    id: 5,
+    id: 6,
     title: "The Films",
     subtitle: "Movie Discovery Platform",
     description:
@@ -104,7 +131,7 @@ export const projects = [
   },
 
   {
-    id: 6,
+    id: 7,
     title: "Tomato",
     subtitle: "Food Ordering Web App",
     description:
@@ -120,7 +147,7 @@ export const projects = [
   },
 
   {
-    id: 7,
+    id: 8,
     title: "Medicure",
     subtitle: "Mental Wellness Web Experience",
     description:
@@ -133,21 +160,5 @@ export const projects = [
     stack: ["Next.js", "React", "TailwindCSS", "Figma"],
     year: "2024",
     category: "Health Tech",
-  },
-
-  {
-    id: 8,
-    title: "Cryptoplace",
-    subtitle: "Crypto Market Tracker",
-    description:
-      "A crypto tracking dashboard with live market data, search functionality, and data visualization powered by public APIs.",
-    preview: cryptoplace,
-    links: {
-      demo: "https://cryptoplace-drab-psi.vercel.app/",
-      github: "https://github.com/pragatighosh25/cryptoplace",
-    },
-    stack: ["React", "CoinGecko API", "Google Charts"],
-    year: "2023",
-    category: "Data Visualization",
   },
 ];
